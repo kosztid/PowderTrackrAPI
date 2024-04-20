@@ -59,6 +59,7 @@ Class | Method | HTTP request | Description
 *DefaultAPI* | [**userfriendListsIdGet**](docs/DefaultAPI.md#userfriendlistsidget) | **GET** /userfriendLists/{id} | 
 *DefaultAPI* | [**userfriendListsPut**](docs/DefaultAPI.md#userfriendlistsput) | **PUT** /userfriendLists | 
 *DefaultAPI* | [**usersGet**](docs/DefaultAPI.md#usersget) | **GET** /users | 
+*DefaultAPI* | [**usersIdGet**](docs/DefaultAPI.md#usersidget) | **GET** /users/{id} | 
 *DefaultAPI* | [**usersPut**](docs/DefaultAPI.md#usersput) | **PUT** /users | 
 
 

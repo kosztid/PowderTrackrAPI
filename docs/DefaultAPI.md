@@ -37,6 +37,7 @@ Method | HTTP request | Description
 [**userfriendListsIdGet**](DefaultAPI.md#userfriendlistsidget) | **GET** /userfriendLists/{id} | 
 [**userfriendListsPut**](DefaultAPI.md#userfriendlistsput) | **PUT** /userfriendLists | 
 [**usersGet**](DefaultAPI.md#usersget) | **GET** /users | 
+[**usersIdGet**](DefaultAPI.md#usersidget) | **GET** /users/{id} | 
 [**usersPut**](DefaultAPI.md#usersput) | **PUT** /users | 
 
 
@@ -1539,6 +1540,53 @@ DefaultAPI.usersGet() { (response, error) in
 
 ### Parameters
 This endpoint does not need any parameter.
+
+### Return type
+
+[**[User]**](User.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usersIdGet**
+```swift
+    open class func usersIdGet(id: String, completion: @escaping (_ data: [User]?, _ error: Error?) -> Void)
+```
+
+
+
+### Example
+```swift
+// The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
+import OpenAPIClient
+
+let id = "id_example" // String | 
+
+DefaultAPI.usersIdGet(id: id) { (response, error) in
+    guard error == nil else {
+        print(error)
+        return
+    }
+
+    if (response) {
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String** |  | 
 
 ### Return type
 
