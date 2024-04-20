@@ -1567,7 +1567,7 @@ No authorization required
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
 import OpenAPIClient
 
-let user = User(id: "id_example", name: "name_example", email: 123) // User | 
+let user = User(id: "id_example", name: "name_example", email: "email_example") // User | 
 
 DefaultAPI.usersPut(user: user) { (response, error) in
     guard error == nil else {

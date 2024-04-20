@@ -14,9 +14,9 @@ public struct User: Codable, JSONEncodable, Hashable {
 
     public var id: String
     public var name: String
-    public var email: Double
+    public var email: String
 
-    public init(id: String, name: String, email: Double) {
+    public init(id: String, name: String, email: String) {
         self.id = id
         self.name = name
         self.email = email
