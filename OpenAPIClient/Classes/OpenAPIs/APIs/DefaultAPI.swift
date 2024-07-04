@@ -1230,12 +1230,13 @@ open class DefaultAPI {
     /**
 
      - parameter id: (path)  
+     - parameter userFriendDeletion: (body)  
      - parameter apiResponseQueue: The queue on which api response is dispatched.
      - parameter completion: completion handler to receive the data and the error objects
      */
     @discardableResult
-    open class func userfriendListsIdDelete(id: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: Void?, _ error: Error?) -> Void)) -> RequestTask {
-        return userfriendListsIdDeleteWithRequestBuilder(id: id).execute(apiResponseQueue) { result in
+    open class func userfriendListsIdDelete(id: String, userFriendDeletion: UserFriendDeletion, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: Void?, _ error: Error?) -> Void)) -> RequestTask {
+        return userfriendListsIdDeleteWithRequestBuilder(id: id, userFriendDeletion: userFriendDeletion).execute(apiResponseQueue) { result in
             switch result {
             case .success:
                 completion((), nil)
@@ -1248,20 +1249,21 @@ open class DefaultAPI {
     /**
      - DELETE /userfriendLists/{id}
      - parameter id: (path)  
+     - parameter userFriendDeletion: (body)  
      - returns: RequestBuilder<Void> 
      */
-    open class func userfriendListsIdDeleteWithRequestBuilder(id: String) -> RequestBuilder<Void> {
+    open class func userfriendListsIdDeleteWithRequestBuilder(id: String, userFriendDeletion: UserFriendDeletion) -> RequestBuilder<Void> {
         var localVariablePath = "/userfriendLists/{id}"
         let idPreEscape = "\(APIHelper.mapValueToPathItem(id))"
         let idPostEscape = idPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         localVariablePath = localVariablePath.replacingOccurrences(of: "{id}", with: idPostEscape, options: .literal, range: nil)
         let localVariableURLString = OpenAPIClientAPI.basePath + localVariablePath
-        let localVariableParameters: [String: Any]? = nil
+        let localVariableParameters = JSONEncodingHelper.encodingParameters(forEncodableObject: userFriendDeletion)
 
         let localVariableUrlComponents = URLComponents(string: localVariableURLString)
 
         let localVariableNillableHeaders: [String: Any?] = [
-            :
+            "Content-Type": "application/json",
         ]
 
         let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)

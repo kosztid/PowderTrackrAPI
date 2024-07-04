@@ -1374,7 +1374,7 @@ No authorization required
 
 # **userfriendListsIdDelete**
 ```swift
-    open class func userfriendListsIdDelete(id: String, completion: @escaping (_ data: Void?, _ error: Error?) -> Void)
+    open class func userfriendListsIdDelete(id: String, userFriendDeletion: UserFriendDeletion, completion: @escaping (_ data: Void?, _ error: Error?) -> Void)
 ```
 
 
@@ -1385,8 +1385,9 @@ No authorization required
 import OpenAPIClient
 
 let id = "id_example" // String | 
+let userFriendDeletion = UserFriendDeletion(userId: "userId_example", friendId: "friendId_example") // UserFriendDeletion | 
 
-DefaultAPI.userfriendListsIdDelete(id: id) { (response, error) in
+DefaultAPI.userfriendListsIdDelete(id: id, userFriendDeletion: userFriendDeletion) { (response, error) in
     guard error == nil else {
         print(error)
         return
@@ -1403,6 +1404,7 @@ DefaultAPI.userfriendListsIdDelete(id: id) { (response, error) in
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String** |  | 
+ **userFriendDeletion** | [**UserFriendDeletion**](UserFriendDeletion.md) |  | 
 
 ### Return type
 
@@ -1414,7 +1416,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
