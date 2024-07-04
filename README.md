@@ -54,6 +54,7 @@ Class | Method | HTTP request | Description
 *DefaultAPI* | [**userTrackedPathsIdDelete**](docs/DefaultAPI.md#usertrackedpathsiddelete) | **DELETE** /userTrackedPaths/{id} | 
 *DefaultAPI* | [**userTrackedPathsIdGet**](docs/DefaultAPI.md#usertrackedpathsidget) | **GET** /userTrackedPaths/{id} | 
 *DefaultAPI* | [**userTrackedPathsPut**](docs/DefaultAPI.md#usertrackedpathsput) | **PUT** /userTrackedPaths | 
+*DefaultAPI* | [**userfriendListsDelete**](docs/DefaultAPI.md#userfriendlistsdelete) | **DELETE** /userfriendLists | 
 *DefaultAPI* | [**userfriendListsGet**](docs/DefaultAPI.md#userfriendlistsget) | **GET** /userfriendLists | 
 *DefaultAPI* | [**userfriendListsIdDelete**](docs/DefaultAPI.md#userfriendlistsiddelete) | **DELETE** /userfriendLists/{id} | 
 *DefaultAPI* | [**userfriendListsIdGet**](docs/DefaultAPI.md#userfriendlistsidget) | **GET** /userfriendLists/{id} | 

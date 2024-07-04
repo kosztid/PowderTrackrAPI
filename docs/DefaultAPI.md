@@ -32,6 +32,7 @@ Method | HTTP request | Description
 [**userTrackedPathsIdDelete**](DefaultAPI.md#usertrackedpathsiddelete) | **DELETE** /userTrackedPaths/{id} | 
 [**userTrackedPathsIdGet**](DefaultAPI.md#usertrackedpathsidget) | **GET** /userTrackedPaths/{id} | 
 [**userTrackedPathsPut**](DefaultAPI.md#usertrackedpathsput) | **PUT** /userTrackedPaths | 
+[**userfriendListsDelete**](DefaultAPI.md#userfriendlistsdelete) | **DELETE** /userfriendLists | 
 [**userfriendListsGet**](DefaultAPI.md#userfriendlistsget) | **GET** /userfriendLists | 
 [**userfriendListsIdDelete**](DefaultAPI.md#userfriendlistsiddelete) | **DELETE** /userfriendLists/{id} | 
 [**userfriendListsIdGet**](DefaultAPI.md#userfriendlistsidget) | **GET** /userfriendLists/{id} | 
@@ -1313,6 +1314,53 @@ DefaultAPI.userTrackedPathsPut(userTrackedPaths: userTrackedPaths) { (response, 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userTrackedPaths** | [**UserTrackedPaths**](UserTrackedPaths.md) |  | 
+
+### Return type
+
+Void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **userfriendListsDelete**
+```swift
+    open class func userfriendListsDelete(userFriendDeletion: UserFriendDeletion, completion: @escaping (_ data: Void?, _ error: Error?) -> Void)
+```
+
+
+
+### Example
+```swift
+// The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
+import OpenAPIClient
+
+let userFriendDeletion = UserFriendDeletion(userId: "userId_example", friendId: "friendId_example") // UserFriendDeletion | 
+
+DefaultAPI.userfriendListsDelete(userFriendDeletion: userFriendDeletion) { (response, error) in
+    guard error == nil else {
+        print(error)
+        return
+    }
+
+    if (response) {
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userFriendDeletion** | [**UserFriendDeletion**](UserFriendDeletion.md) |  | 
 
 ### Return type
 
